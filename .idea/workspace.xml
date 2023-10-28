@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f58ba564-6147-4e5d-a3da-2d9933a5a14e" name="Changes" comment="" />
+    <list default="true" id="f58ba564-6147-4e5d-a3da-2d9933a5a14e" name="Changes" comment="Django setup">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SDA Final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SDA Final.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,11 +51,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698492735116</updated>
-      <workItem from="1698492737578" duration="356000" />
+      <workItem from="1698492737578" duration="2510000" />
     </task>
+    <task id="LOCAL-00001" summary="Django setup">
+      <option name="closed" value="true" />
+      <created>1698493237880</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698493237880</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Django setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Django setup" />
   </component>
 </project>
