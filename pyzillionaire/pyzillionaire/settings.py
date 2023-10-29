@@ -75,15 +75,10 @@ WSGI_APPLICATION = 'pyzillionaire.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'pyzillionaire',
-        'USER': 'dev',
-        'PASSWORD': 'zJ3M@KHbJEAFK^m',
-        'HOST':'localhost',
-        'PORT':'3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 
 # Password validation
