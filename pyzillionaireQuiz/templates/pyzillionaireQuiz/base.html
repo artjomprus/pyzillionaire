@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>{% block Pyzillionaire %}{% endblock %}</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="{% url 'home' %}"></a>
+            <ul>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'register' %}">Register</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Body -->
+    <main>
+    {% block content %}
+    {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© Team2-SDA 2023</p>
+    </footer>
+
+  </body>
+
+</html>

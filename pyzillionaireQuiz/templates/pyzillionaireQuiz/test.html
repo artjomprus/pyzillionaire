@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Categories, Difficulties, and Questions</title>
+</head>
+<body>
+    <h1>Choose Category</h1>
+    <select name="category">
+        <option value="">Select a category</option>
+        {% for category in categories %}
+            <option value="{{ category.id }}">{{ category.name }}</option>
+        {% endfor %}
+    </select>
+
+    <h1>Choose Difficulty</h1>
+    <select name="difficulty">
+        <option value="">Select a difficulty</option>
+        {% for difficulty in difficulties %}
+            <option value="{{ difficulty }}">{{ difficulty }}</option>
+        {% endfor %}
+    </select>
+
+    <h1>Number of Questions</h1>
+    <input type="number" name="questions" min="1" max="10" value="5">
+
+    <button type="submit">Get Questions</button>
+</body>
+</html>

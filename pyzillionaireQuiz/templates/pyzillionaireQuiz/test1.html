@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trivia Questions</title>
+</head>
+<body>
+    <h1>Select Difficulty:</h1>
+    <select id="difficulty">
+        <option value="">Select a difficulty</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+
+    <h1>Select Category:</h1>
+    <select id="category">
+        <option value="">Select a category</option>
+        {% for category in categories %}
+            <option value="{{ category.id }}">{{ category.name }}</option>
+        {% endfor %}
+    </select>
+
+    <h1>Number of Questions:</h1>
+    <input type="number" id="amount" min="1" max="10" value="5">
+
+    <button id="getQuestions">Get Questions</button>
+
+    <h1>Questions:</h1>
+    <ul id="questions">
+        <!-- Questions will be displayed here -->
+    </ul>
+
+    <script>
+        document.getElementById("getQuestions").addEventListener("click", function() {
+            const difficulty = document.getElementById("difficulty").value;
+            const category = document.getElementById("category").value;
+            const amount = document.getElementById("amount").value;
+
+            if (!difficulty || !category || !amount) {
+                alert("Please select difficulty, category, and number of questions.");
+                return;
+            }
+
+            const apiUrl = `/fetch_questions/?difficulty=${difficulty}&category=${category}&amount=${amount}`;
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const questionsList = document.getElementById("questions");
+                    questionsList.innerHTML = "";
+
+                    data.forEach(question => {
+                        const listItem = document.createElement("li");
+                        listItem.textContent = question.question;
+                        questionsList.appendChild(listItem);
+                    });
+                })
+                .catch(error => {
+                    console.error("Failed to fetch questions:", error);
+                });
+        });
+    </script>
+</body>
+</html>
