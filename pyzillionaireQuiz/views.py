@@ -1,5 +1,6 @@
 from .utils.api import fetch_questions
 from .models import TriviaQuestion
+from django.shortcuts import render
 
 
 def all_questions(request):
@@ -23,3 +24,7 @@ def all_questions(request):
 	questions = TriviaQuestion.objects.all()
 	context = {"questions": questions}
 	return
+
+
+def index(response):
+	return render(response, "pyzillionaireQuiz/template/pyzillionaireQuiz/index.html, {}")
