@@ -1,6 +1,4 @@
-import requests
-
-from utils.api import fetch_questions
+from .utils.api import fetch_questions
 from .models import TriviaQuestion
 
 

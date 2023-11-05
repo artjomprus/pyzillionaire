@@ -80,12 +80,12 @@ WSGI_APPLICATION = 'pyzillionaire.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'pyzillionaire',
         'USER': os.environ.get("DB_USER"),
         'PASSWORD': os.environ.get("DB_PASSWORD"),
         'HOST':'localhost',
-        'PORT':'3306',
+        'PORT': os.environ.get("DB_PORT")
     }
 }
 
