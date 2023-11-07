@@ -10,7 +10,3 @@ urlpatterns = [
 
 ]
 
-
-# urlpatterns = [
-#     path("all/", all_questions),
-# ]
