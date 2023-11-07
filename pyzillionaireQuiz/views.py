@@ -3,11 +3,11 @@ from .models import TriviaQuestion
 from django.shortcuts import render
 
 
-def game(response):
-	return render(response, "game.html, {}")
+def game(request):
+	return render(request, "game.html, {}")
 
-def index(response):
-	return render(response, "index.html, {}")
+def index(request):
+	return render(request, "index.html, {}")
 
 def all_questions(request):
 	response = fetch_questions()
