@@ -1,10 +1,16 @@
 from django.urls import path
+from . import views
 
-from .views import all_questions
-from .views import index
 
 
 urlpatterns = [
-    path("all/", all_questions),
-    path("", index),
+    path('all/', views.all_questions, name='all_questions'),
+    path('index/', views.index, name='index'),
+    path('game/', views.game, name='game'),
+
 ]
+
+
+# urlpatterns = [
+#     path("all/", all_questions),
+# ]

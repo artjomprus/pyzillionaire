@@ -3,6 +3,12 @@ from .models import TriviaQuestion
 from django.shortcuts import render
 
 
+def game(response):
+	return render(response, "game.html, {}")
+
+def index(response):
+	return render(response, "index.html, {}")
+
 def all_questions(request):
 	response = fetch_questions()
 
@@ -24,7 +30,3 @@ def all_questions(request):
 	questions = TriviaQuestion.objects.all()
 	context = {"questions": questions}
 	return
-
-
-def index(response):
-	return render(response, "pyzillionaireQuiz/template/pyzillionaireQuiz/index.html, {}")
