@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Triva Questions{% endblock %}
+
+{% block content %}
+    <main>
+     <h1> Select Category</h1>
+        <label for="category"></label><select id="category">
+        <option value="">Select a category</option>
+        {% for category in categories %}
+            <option value="{{ category}}">{{ category}}</option>
+            {% endfor %}
+    </select>
+
+    <h1>Select Difficulty:</h1>
+    <label for="difficulty"></label><select id="difficulty">
+        <option value="">Select a difficulty</option>
+        {% for level in difficulty_levels %}
+            <option value="{{ level.id }}">{{ level.id }}</option>
+        {% endfor %}
+    </select>
+{% endblock content%}
+</main>
