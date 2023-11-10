@@ -1,7 +1,7 @@
 
 from django.core.management.base import BaseCommand
 import requests
-from pyzillionaireQuiz.models import Question
+from pyzillionaireQuiz.models import TriviaQuestions
 
 
 class Command(BaseCommand):
@@ -13,6 +13,6 @@ class Command(BaseCommand):
         questions_data = response.json()
 
         for question_data in questions_data:
-            Question.objects.create(question_text=question_data['text'])
+            TriviaQuestions.objects.create(question_text=question_data['text'])
 
         self.stdout.write(self.style.SUCCESS('Questions fetched and stored successfully'))
